@@ -2212,6 +2212,12 @@ p  { font-weight: 300; }
   opacity: 0.55 !important;
 }
 
+/* === Blindaje del hero ante body.v2 (Lote B) ===
+   #hero-anunciantes conserva su CSS y su JS propios. v2.css se carga despues e
+   impone reglas .v2 h1/h2; aqui se re-afirma la serif del titulo para que la
+   tipografia del hero NUNCA dependa de v2. El color ya va con !important arriba. */
+body.v2 #hero-anunciantes h1 { font-family: var(--serif); }
+
 /* ── Mobile: hero no cortado ── */
 @media (max-width: 600px) {
   .seccion-hero {

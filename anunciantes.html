@@ -97,6 +97,10 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/metal-button.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
+  <!-- Sistema visual v2 (Ley de diseño v2 §7b). LA ULTIMA para ganar la cascada.
+       Se aplica a TODO el cuerpo MENOS al hero: #hero-anunciantes conserva su CSS
+       propio (blindaje al final de anunciantes.css). -->
+  <link rel="stylesheet" href="assets/css/v2.css" />
 
   <!-- Aplica idioma guardado (compatibilidad con visitas desde index.html) -->
   <script>
@@ -116,7 +120,7 @@
   </script>
 
 </head>
-<body>
+<body class="v2">
 
   <!-- ===== NAVBAR UNIVERSAL ===== -->
   <nav class="em-nav" aria-label="Navegación principal">
@@ -239,7 +243,7 @@
             </div>
             <div class="metal-btn-wrap" data-variant="gold" data-size="lg">
               <div class="metal-btn-inner"></div>
-              <button class="metal-btn" onclick="window.location.href='portal/index.html'">
+              <button class="metal-btn" onclick="window.location.href='/portal/index.html'">
                 <div class="metal-btn-shine"></div>
                 <div class="metal-btn-hover-glow"></div>
                 <span class="lang-es">Acceder a mi portal →</span><span class="lang-en">Access my portal →</span>
