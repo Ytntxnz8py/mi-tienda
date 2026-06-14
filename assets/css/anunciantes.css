@@ -2741,5 +2741,11 @@ body.v2 #hero-anunciantes h1 { font-family: var(--serif); }
   -webkit-text-fill-color: var(--destacado-tx, #956400);
 }
 
+/* --- Acentos: eyebrows teal -> coral B2B (color de accion de esta pagina).
+   El hero queda fuera (su pill usa su propio teal, blindado). --- */
+.an-eyebrow,
+.seccion-precios__eyebrow,
+.pq-eyebrow { color: var(--accion-empresa, #C0392B); }
+
 
 
