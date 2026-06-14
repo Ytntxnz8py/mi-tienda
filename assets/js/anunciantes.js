@@ -174,31 +174,6 @@
       if (card.closest('.seccion-precios')) return;
       bindTilt(card, 6);
     });
-    /* Tilt en la escena del mockup (no en la card directamente para no romper transform 3D) */
-    var scene = document.querySelector('.mockup-scene');
-    if (scene) {
-      scene.addEventListener('mousemove', function (e) {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        var card = scene.querySelector('.mockup-card');
-        if (!card) return;
-        var rect = scene.getBoundingClientRect();
-        var cx   = rect.left + rect.width  / 2;
-        var cy   = rect.top  + rect.height / 2;
-        var dx   = (e.clientX - cx) / (rect.width  / 2);
-        var dy   = (e.clientY - cy) / (rect.height / 2);
-        var rotY = -15 + dx * 10;
-        var rotX =   5 + dy * -4;
-        card.style.transition = 'none';
-        card.style.transform =
-          'rotateY(' + rotY.toFixed(2) + 'deg) rotateX(' + rotX.toFixed(2) + 'deg) scale(0.94)';
-      });
-      scene.addEventListener('mouseleave', function () {
-        var card = scene.querySelector('.mockup-card');
-        if (!card) return;
-        card.style.transition = 'transform 0.55s var(--ease, cubic-bezier(0.2,0,0,1))';
-        card.style.transform  = 'rotateY(-15deg) rotateX(5deg) scale(0.92)';
-      });
-    }
   }
 
   /* ===== FAQ ACCORDION — height real + clip-path spring ===== */
