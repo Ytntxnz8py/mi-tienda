@@ -90,9 +90,7 @@ p  { font-weight: 300; }
 .header__enlace:hover { color: var(--turquesa); background: rgba(0,188,212,0.08); }
 .header__enlace.active { color: var(--turquesa); font-weight: 600; }
 .header__enlace--cta {
-  background: linear-gradient(135deg, var(--coral), var(--turquesa));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; font-weight: 600;
+  color: var(--accion-empresa, #C0392B); font-weight: 600;
 }
 .header__menu-btn {
   display: none; flex-direction: column; justify-content: center; gap: 5px;
@@ -1723,9 +1721,7 @@ p  { font-weight: 300; }
 .fn__link:hover { color: var(--turquesa); background: rgba(0, 188, 212, 0.09); }
 .fn__link--active { color: var(--turquesa); font-weight: 600; }
 .fn__link--cta {
-  background: linear-gradient(135deg, var(--coral), var(--turquesa));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; font-weight: 700;
+  color: var(--accion-empresa, #C0392B); font-weight: 700;
 }
 .fn__link--back { color: rgba(26, 42, 53, 0.52); font-size: 0.8rem; }
 .fn__link--back::before { content: '← '; }
@@ -2725,6 +2721,24 @@ body.v2 #hero-anunciantes h1 { font-family: var(--serif); }
     justify-content: center;
   }
   .hero-aurora { opacity: 0.40 !important; }
+}
+
+/* ============================================================
+   VESTIDO V2 — LOTE B  (override final: gana a las reglas previas
+   de anunciantes.css; v2.css no toca estas clases de seccion).
+   El #hero-anunciantes queda FUERA (blindado mas arriba).
+   ============================================================ */
+
+/* --- PRECIOS: shader muy atenuado + seccion blanca (decision: atenuar mucho).
+   Se conservan las tarjetas y sus efectos (botones metalicos, hover, tilt). --- */
+#preciosCanvas { opacity: 0.10; }
+.seccion-precios { background: var(--blanco, #FFFFFF); }
+/* Badge destacado en mostaza (unico uso de mostaza, igual que en el index) */
+.precio-card__badge--popular {
+  background: var(--destacado-bg, #FBF3DB) !important;
+  color: var(--destacado-tx, #956400) !important;
+  border: 1px solid rgba(149, 100, 0, 0.22);
+  -webkit-text-fill-color: var(--destacado-tx, #956400);
 }
 
 
