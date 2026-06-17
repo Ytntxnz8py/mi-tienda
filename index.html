@@ -77,6 +77,9 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/navbar.css" />
+  <!-- Boton oficial de marca (MetalButton + Liquid Sweep) -->
+  <link rel="stylesheet" href="assets/css/metal-button.css" />
+  <link rel="stylesheet" href="assets/css/liquid-btn.css" />
   <!-- Sistema visual v2 (Ley de diseño v2 §7b). Va LA ULTIMA para ganar la cascada.
        Se activa con la clase v2 en el body (Commit 2). -->
   <link rel="stylesheet" href="assets/css/v2.css" />
@@ -151,9 +154,14 @@
             <span class="lang-es">Playas, pesca, buceo y naturaleza — encuentra tu destino en minutos.</span>
             <span class="lang-en">Beaches, fishing, diving and nature — find your spot in minutes.</span>
           </p>
-          <a class="v2-btn v2-hero__cta" href="#destinos">
-            <span class="lang-es">Explorar destinos</span><span class="lang-en">Explore destinations</span>
-          </a>
+          <div class="metal-btn-wrap v2-hero__cta" data-variant="turquesa" data-size="lg">
+            <div class="metal-btn-inner"></div>
+            <a class="metal-btn" href="#destinos">
+              <div class="metal-btn-shine"></div>
+              <div class="metal-btn-hover-glow"></div>
+              <span class="lang-es">Explorar destinos</span><span class="lang-en">Explore destinations</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -220,7 +228,14 @@
           <span class="v2-eyebrow"><span class="lang-es">Guía</span><span class="lang-en">Guide</span></span>
           <h2><span class="lang-es">La guía de pesca de Miami</span><span class="lang-en">The Miami Fishing Guide</span></h2>
           <p><span class="lang-es">De los flats de la bahía al Gulf Stream: qué se pesca, cuándo y cómo salir bien preparado.</span><span class="lang-en">From the bay flats to the Gulf Stream: what's biting, when, and how to go out prepared.</span></p>
-          <a class="v2-btn" href="pesca.html"><span class="lang-es">Explorar la guía →</span><span class="lang-en">Explore the guide →</span></a>
+          <div class="metal-btn-wrap" data-variant="turquesa" data-size="md">
+            <div class="metal-btn-inner"></div>
+            <a class="metal-btn" href="pesca.html">
+              <div class="metal-btn-shine"></div>
+              <div class="metal-btn-hover-glow"></div>
+              <span class="lang-es">Explorar la guía →</span><span class="lang-en">Explore the guide →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -235,9 +250,14 @@
         <form class="v2-news__form newsletter-form" id="newsletterForm" novalidate autocomplete="off" aria-label="Formulario newsletter">
           <input class="v2-news__input newsletter-input" id="newsletterEmail" type="email"
                  autocomplete="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
-          <button class="v2-btn newsletter-submit" type="submit">
-            <span class="lang-es">Suscribirme</span><span class="lang-en">Subscribe</span>
-          </button>
+          <div class="metal-btn-wrap" data-variant="turquesa" data-size="md">
+            <div class="metal-btn-inner"></div>
+            <button class="metal-btn newsletter-submit" type="submit">
+              <div class="metal-btn-shine"></div>
+              <div class="metal-btn-hover-glow"></div>
+              <span class="lang-es">Suscribirme</span><span class="lang-en">Subscribe</span>
+            </button>
+          </div>
         </form>
         <p class="v2-news__err newsletter-disclaimer" id="newsletterError" role="alert" style="display:none">
           <span class="lang-es">No pudimos procesar tu suscripción. Inténtalo de nuevo.</span>
@@ -335,6 +355,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/analytics.js"></script>
   <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/metal-button.js"></script>
 
 
 </body>
